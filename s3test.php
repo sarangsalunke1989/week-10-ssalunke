@@ -31,18 +31,18 @@ foreach ($result['Buckets'] as $bucket) {
 //echo $result_1
 
 $objects = $s3->getIterator('ListObjects', array(
-        'Bucket' => 'ssalunke-week-10'
+        'Bucket' => 'raw-sss-sal'
     ));
     foreach ($objects as $object)
         {
 //      echo $object['Key'] . "\n";
         }
-$url = $s3->getObjectUrl('ssalunke-week-10', 'img');
+$url = $s3->getObjectUrl('raw-sss-sal', 'img');
 //echo $url;
 
 $result_upload = $s3->putObject(array(
-    'Bucket'     => 'ssalunke-week-10',
-    'Key'        => 'newimg',
+    'Bucket'     => 'raw-sss-sal',
+    'Key'        => 'trex',
     'SourceFile' => 'switchonarex.png',
     'ACL'        => 'public-read'
     )
@@ -56,7 +56,7 @@ $result_upload = $s3->putObject(array(
 
 */
 
-$url_rex = $s3->getObjectUrl('ssalunke-week-10', 'newimg');
+$url_rex = $s3->getObjectUrl('raw-sss-sal', 'trex');
 //echo $url_rex;
 
 
