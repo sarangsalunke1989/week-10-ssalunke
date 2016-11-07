@@ -4,8 +4,8 @@ $servername = file_get_contents('conn.txt') or die ("Error");
 
 //$servername='sarang-db.cmyhufjngqyk.us-west-2.rds.amazonaws.com';
 
-$username = "sarang";
-$password = "sarang123";
+$username = "";
+$password = "";
 
 //foreach (glob("conn.txt") as $filename) {
   // $servername=nl2br(file_get_contents($filename));
